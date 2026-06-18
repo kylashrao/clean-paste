@@ -181,3 +181,89 @@ footer {
     background-color: rgba(239, 68, 68, 0.1) !important;
     /* Subtle soft red hover */
 }
+
+/* Navigation Header Styles */
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a,
+.back-home {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.back-home:hover {
+    color: var(--accent);
+}
+
+/* Blog Page layout formatting */
+.blog-content {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    line-height: 1.7;
+}
+
+.blog-content h1 {
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.blog-content .meta {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+.blog-content h2 {
+    margin: 20px 0 10px 0;
+    font-size: 1.4rem;
+}
+
+.blog-content p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+.blog-content code {
+    background-color: var(--bg-color);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #f43f5e;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
