@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean-Paste // Instant Text & Link Stripper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🧼 Clean-Paste</h1>
+            <p>Strip formatting, styles, and annoying tracking tokens instantly. No logins, no data tracking, 100%
+                private.</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('text-mode')">Text Stripper</button>
+            <button class="tab-btn" onclick="switchTab('link-mode')">URL Link Cleaner</button>
+        </div>
+
+        <div id="text-mode" class="panel active">
+            <textarea id="text-input" placeholder="Paste your messy formatted text here..."></textarea>
+
+            <div class="controls">
+                <button onclick="processText('clean')">Just Clean Text</button>
+                <button onclick="processText('uppercase')">UPPERCASE</button>
+                <button onclick="processText('lowercase')">lowercase</button>
+                <button onclick="processText('strip-emojis')">Strip Emojis</button>
+                <button onclick="clearPanel('text')" class="clear-btn">Clear All</button>
+            </div>
+
+            <div class="output-container">
+                <textarea id="text-output" readonly placeholder="Your clean plain text will appear here..."></textarea>
+                <button class="copy-btn" onclick="copyToClipboard('text-output')">Copy Clean Text</button>
+            </div>
+        </div>
+
+        <div id="link-mode" class="panel">
+            <input type="text" id="link-input"
+                placeholder="Paste long tracking link here (e.g., Amazon, Twitter, UTM links)...">
+
+            <div class="controls">
+                <button onclick="cleanLink()">Clean Link</button>
+                <button onclick="clearPanel('link')" class="clear-btn">Clear All</button>
+            </div>
+
+            <div class="output-container">
+                <input type="text" id="link-output" readonly placeholder="Clean canonical link will appear here...">
+                <button class="copy-btn" onclick="copyToClipboard('link-output')">Copy Clean Link</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with privacy in mind. All processing happens locally inside your browser.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
